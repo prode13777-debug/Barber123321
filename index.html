@@ -1,148 +1,157 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Borodach Barbershop</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-  <!-- HEADER -->
-  <header class="header">
-    <div class="container">
-      <div class="logo">Borodach</div>
-      <nav class="nav">
-        <a href="#hero">Главная</a>
-        <a href="#about">О нас</a>
-        <a href="#services">Услуги</a>
-        <a href="#masters">Мастера</a>
-        <a href="#gallery">Галерея</a>
-        <a href="#offers">Акции</a>
-        <a href="#contacts">Контакты</a>
+  <!-- Header / Nav -->
+  <header id="site-header" class="site-header" role="banner">
+    <div class="container nav">
+      <div class="logo"><a href="#top">Borodach</a></div>
+      <button id="nav-toggle" class="nav-toggle" aria-label="Открыть меню" aria-expanded="false">
+        <span class="hamburger" aria-hidden="true"></span>
+      </button>
+      <nav id="nav-menu" class="nav-menu" aria-label="Главное меню">
+        <ul>
+          <li><a href="#top">Главная</a></li>
+          <li><a href="#about">О нас</a></li>
+          <li><a href="#services">Услуги</a></li>
+          <li><a href="#team">Мастера</a></li>
+          <li><a href="#gallery">Галерея</a></li>
+          <li><a href="#offers">Акции</a></li>
+          <li><a href="#contacts">Контакты</a></li>
+        </ul>
       </nav>
     </div>
   </header>
 
-  <!-- HERO -->
-  <section id="hero" class="hero">
-    <div class="hero-content">
-      <h1>Borodach Barbershop</h1>
-      <p>Мужские стрижки, бороды и стиль</p>
-      <a href="#contacts" class="btn">Записаться онлайн</a>
-    </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section id="about" class="section about">
-    <div class="container about-layout">
-      <img src="assets/about-1.jpg" alt="О нас">
-      <div>
-        <h2>О нас</h2>
-        <p>Мы создаём стиль и уверенность. Наши мастера владеют современными техниками и знают, что значит настоящий барберинг.</p>
-        <p>Интерьер Borodach выполнен в духе мужской атмосферы: дерево, металл и комфорт. Каждый клиент — это наш гость и друг.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- WHY US -->
-  <section id="why" class="section dark">
-    <div class="container">
-      <h2>Почему выбирают нас</h2>
-      <div class="cards">
-        <div class="card">✂ Опытные мастера</div>
-        <div class="card">💈 Премиальные материалы</div>
-        <div class="card">🏆 Стильная атмосфера</div>
-        <div class="card">📱 Онлайн-запись</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SERVICES -->
-  <section id="services" class="section">
-    <div class="container">
-      <h2>Наши услуги</h2>
-      <div class="cards">
-        <div class="card">
-          <h3>Мужская стрижка</h3>
-          <p>1500 ₽</p>
-        </div>
-        <div class="card">
-          <h3>Бритьё опасной бритвой</h3>
-          <p>1200 ₽</p>
-        </div>
-        <div class="card">
-          <h3>Уход за бородой</h3>
-          <p>1000 ₽</p>
+  <main id="main">
+    <!-- Hero -->
+    <section id="top" class="hero" aria-label="Главный экран">
+      <img
+        class="hero-bg"
+        src="assets/images/hero.jpg"
+        alt="Интерьер барбершопа Borodach"
+        loading="eager"
+      />
+      <div class="hero-overlay"></div>
+      <div class="hero-inner container">
+        <h1 class="hero-title">Borodach Barbershop</h1>
+        <p class="hero-sub">Мужские стрижки, бороды и стиль</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#contacts">Записаться онлайн</a>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- MASTERS -->
-  <section id="masters" class="section dark">
-    <div class="container">
-      <h2>Наши мастера</h2>
-      <div class="cards">
-        <div class="card">
-          <img src="assets/master1.jpg" alt="Мастер Иван">
-          <h3>Иван</h3>
-          <p>Специалист по классическим стрижкам</p>
+    <!-- About -->
+    <section id="about" class="section about">
+      <div class="container about-grid">
+        <div class="about-card card">
+          <h2 class="section-title">О нас</h2>
+          <p>Borodach — это пространство для уверенных в себе мужчин. Мы объединяем классические техники и современные тренды: стрижки, бритьё и уход за бородой.</p>
+          <p>Наши мастера — опытные барберы, которые создают уникальный стиль для каждого клиента.</p>
         </div>
-        <div class="card">
-          <img src="assets/master2.jpg" alt="Мастер Алексей">
-          <h3>Алексей</h3>
-          <p>Эксперт по бороде и усам</p>
+        <figure class="about-media">
+          <img src="assets/images/about-1.jpg" alt="Мастер за работой" loading="lazy" />
+        </figure>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="section">
+      <div class="container">
+        <h2 class="section-title">Услуги и цены</h2>
+        <div class="services-grid">
+          <div class="card service-card">
+            <div class="card-title">Мужская стрижка</div>
+            <div class="card-text">1500 ₽</div>
+          </div>
+          <div class="card service-card">
+            <div class="card-title">Бритьё опасной бритвой</div>
+            <div class="card-text">1200 ₽</div>
+          </div>
+          <div class="card service-card">
+            <div class="card-title">Уход за бородой</div>
+            <div class="card-text">1000 ₽</div>
+          </div>
         </div>
-        <div class="card">
-          <img src="assets/master3.jpg" alt="Мастер Дмитрий">
-          <h3>Дмитрий</h3>
-          <p>Мастер современных мужских стрижек</p>
+      </div>
+    </section>
+
+    <!-- Team -->
+    <section id="team" class="section">
+      <div class="container">
+        <h2 class="section-title">Мастера</h2>
+        <div class="team-grid">
+          <article class="card team-member">
+            <img class="team-photo" src="assets/images/team-1.jpg" alt="Иван П." loading="lazy" />
+            <h3>Иван П.</h3>
+            <p class="muted">Главный барбер</p>
+          </article>
+          <article class="card team-member">
+            <img class="team-photo" src="assets/images/team-2.jpg" alt="Алексей С." loading="lazy" />
+            <h3>Алексей С.</h3>
+            <p class="muted">Барбер</p>
+          </article>
+          <article class="card team-member">
+            <img class="team-photo" src="assets/images/team-3.jpg" alt="Дмитрий К." loading="lazy" />
+            <h3>Дмитрий К.</h3>
+            <p class="muted">Барбер</p>
+          </article>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- GALLERY -->
-  <section id="gallery" class="section">
-    <div class="container">
-      <h2>Наши работы</h2>
-      <div class="gallery">
-        <img src="assets/work1.jpg" alt="Работа 1">
-        <img src="assets/work2.jpg" alt="Работа 2">
-        <img src="assets/work3.jpg" alt="Работа 3">
-        <img src="assets/work4.jpg" alt="Работа 4">
-        <img src="assets/work5.jpg" alt="Работа 5">
-        <img src="assets/work6.jpg" alt="Работа 6">
+    <!-- Gallery -->
+    <section id="gallery" class="section">
+      <div class="container">
+        <h2 class="section-title">Галерея</h2>
+        <div class="glider-track" id="glider-track">
+          <div class="glide-item"><img src="assets/images/gallery-1.jpg" alt="Работа 1" loading="lazy" /></div>
+          <div class="glide-item"><img src="assets/images/gallery-2.jpg" alt="Работа 2" loading="lazy" /></div>
+          <div class="glide-item"><img src="assets/images/gallery-3.jpg" alt="Работа 3" loading="lazy" /></div>
+          <div class="glide-item"><img src="assets/images/gallery-4.jpg" alt="Работа 4" loading="lazy" /></div>
+          <div class="glide-item"><img src="assets/images/gallery-5.jpg" alt="Работа 5" loading="lazy" /></div>
+          <div class="glide-item"><img src="assets/images/gallery-6.jpg" alt="Работа 6" loading="lazy" /></div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- OFFERS -->
-  <section id="offers" class="section dark">
-    <div class="container">
-      <h2>Акции</h2>
-      <div class="offer-banner">
-        🎉 Скидка 20% на первое посещение!
+    <!-- Offers -->
+    <section id="offers" class="section">
+      <div class="container">
+        <h2 class="section-title">Акции</h2>
+        <div class="offers-grid">
+          <div class="offer card">
+            <span class="badge">-20%</span>
+            <h3>Скидка на первое посещение</h3>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- CONTACTS -->
-  <footer id="contacts" class="footer">
-    <div class="container">
-      <h2>Контакты</h2>
-      <p>📍 Москва, ул. Барберская, 7</p>
-      <p>📞 <a href="tel:+79998887766">+7 (999) 888-77-66</a></p>
-      <div class="socials">
-        <a href="#">Instagram</a>
-        <a href="#">Telegram</a>
+    <!-- Contacts -->
+    <section id="contacts" class="section contacts">
+      <div class="container">
+        <h2 class="section-title">Контакты</h2>
+        <p><strong>Телефон:</strong> <a href="tel:+79998887766">+7 (999) 888-77-66</a></p>
+        <p><strong>Адрес:</strong> Москва, ул. Примерная, д.7</p>
+        <p><strong>Email:</strong> info@borodach.ru</p>
       </div>
-      <iframe src="https://yandex.ru/map-widget/v1/-/CCU..." width="100%" height="300" frameborder="0"></iframe>
-      <p class="copy">© 2025 Borodach Barbershop</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      © 2025 Borodach Barbershop
     </div>
   </footer>
 
-  <script src="assets/script.js" defer></script>
+  <script defer src="assets/script.js"></script>
 </body>
 </html>
